@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Site </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.png">
+
+   
+    <script>
+
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+
+          if (shown == "wrapper2"){
+            document.getElementById("game").style.display='block';
+          }
+          else{
+            document.getElementById("game").style.display='none';
+          }
+
+          return false;
+        }
+        
+    </script>
+
+</head>
+
+<body class="body" onload="return show('wrapper1', 'wrapper2')">
+
+    
+
+    <div class="wrapper" id="wrapper1">
+
+        
+
+        <h1 class="h1">Site</h1>
+
+        <div class="column" id="page1" style="float: left;">
+            <button class="button" type="button" onclick="return show('wrapper2','wrapper1');">
+                <h2>Physics</h2>
+            </button>
+
+            <button class="button" type="button" onclick="return show('wrapper3','wrapper1');">
+                <h2>Pathfinder</h2>
+            </button>
+
+            <button class="button" type="button" onclick="return show('wrapper4','wrapper1');">
+                <h2>Perlin Noise</h2>
+            </button>
+    
+        </div>
+        <div class="column" style="float: left;">
+            <img src="htmlminimap.png" alt="" style="margin-left: 30px;">
+            <img src="cssminimap.png" alt="" style="margin-left: 30px; margin-bottom: 110px;">
+
+        </div>
+    
+
+    </div>
+    
+    
+    <div class="physics">
+
+        
+        
+
+        
+        <div class="wrapper" id="wrapper2" style="display: none">
+            
+            <h1 style="color: #ffffff;">Physics things</h1>
+
+
+            
+            <div class="column" id="page2">
+
+
+                <button class="button" type="button" onclick="return show('wrapper1','wrapper2');">
+                    <h2>Home</h2>
+                </button>
+
+                <div>
+
+                
+                    <div style="width: 700px; float: left;">
+                        <h1 class="h1" id="text">
+                            Emergent Behaviour
+                        </h1>
+
+                        
+                        <h2 style="color: #ffffff; max-width: 600px;float: left; margin-bottom: 50px;">
+                            This simulation´s objetive is to show how complex behaviour can arise from simple interactions
+
+                        </h2>
+
+                    
+                        
+                    </div>
+
+                    <div style="width: 700px; float: right; margin-top: 150px;">
+                        <video src="emergent.mp4" muted controls class="video" style="margin-bottom: 50px;"> </video>
+
+                        
+
+
+                    </div>
+                </div>
+
+        
+            </div>
+
+            
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <div class="wrapper" id="wrapper3" style="display: none;">
+        <h1 style="color: #ffffff;">Pathfinder algorithm</h1>
+
+        <div class="column" id="page3">
+
+
+            <button class="button" type="button" onclick="return show('wrapper1','wrapper3');">
+                <h2>Home</h2>
+            </button>
+
+            <div>
+                <div style="width: 700px; float: left;">
+                    <h1 class="h1" id="text">
+                        Pathfinder algorithm
+                    </h1>
+                    <video src="newpathfinder1.mp4" muted controls class="video"> </video>
+
+                
+                
+                </div>
+                <div style="width: 700px; float: right; margin-top: 160px;">
+                   
+                    <video src="newpathfinder2.mp4" muted controls class="video"> </video>
+
+                
+                
+                </div>
+
+
+
+            </div>
+    
+        </div>
+
+
+    </div>
+
+    <div class="wrapper" id="wrapper4" style="display: none">
+        <h1 style="color: #ffffff;">Perlin noise</h1>
+
+        <div class="column" id="page4">
+
+
+            <button class="button" type="button" onclick="return show('wrapper1','wrapper4');">
+                <h2>Home</h2>
+            </button>
+
+            <div>
+                <div style="width: 700px; float: left; margin-top: 160px;">
+
+                    <video src="cave.mp4" muted controls class="video"> </video>
+
+                </div>
+                
+            </div>
+
+            <div style="width: 700px; float: right; margin-top: 160px;">
+                <img src="terrain.png" alt="" style="margin-left: 30px; margin-bottom: 110px; max-width: 600px;">
+                <img src="pureperlin.png" alt="" style="margin-left: 30px; margin-bottom: 110px; max-width: 600px;">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    
+    
+    
+</body>
+
+</html>
